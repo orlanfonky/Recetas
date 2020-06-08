@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vaG-Pn-Xj7">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RECETARIO-->
+        <scene sceneID="GGb-2n-4HA">
+            <objects>
+                <tableViewController id="XZH-fq-dIf" customClass="ViewController" customModule="recetas" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JXS-wn-xSa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="120" id="RsY-Ui-xQT" customClass="RecipeCell" customModule="recetas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RsY-Ui-xQT" id="cNN-0K-Jo6">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vw3-if-VxI">
+                                            <rect key="frame" x="8" y="8" width="104" height="104"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="vw3-if-VxI" secondAttribute="height" multiplier="1:1" id="UE5-LK-GRd"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="42"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="BMy-Nn-6cb">
+                                            <rect key="frame" x="124" y="19" width="195" height="82"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KF0-8z-cDA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="47" height="33"/>
+                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="T27-vx-aTG">
+                                                    <rect key="frame" x="0.0" y="37" width="40" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-Yh-Dg5">
+                                                    <rect key="frame" x="0.0" y="61.5" width="40" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="BMy-Nn-6cb" secondAttribute="bottom" constant="8" id="BuB-RB-0cK"/>
+                                        <constraint firstAttribute="bottom" secondItem="vw3-if-VxI" secondAttribute="bottom" constant="8" id="Eg6-Nf-kVs"/>
+                                        <constraint firstItem="BMy-Nn-6cb" firstAttribute="leading" secondItem="vw3-if-VxI" secondAttribute="trailing" constant="12" id="MiK-Ls-ozl"/>
+                                        <constraint firstItem="BMy-Nn-6cb" firstAttribute="top" secondItem="cNN-0K-Jo6" secondAttribute="topMargin" constant="8" id="O8I-eu-QKc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="BMy-Nn-6cb" secondAttribute="trailing" constant="8" id="cUo-MG-ccV"/>
+                                        <constraint firstItem="vw3-if-VxI" firstAttribute="leading" secondItem="cNN-0K-Jo6" secondAttribute="leading" constant="8" id="r1i-p2-FmU"/>
+                                        <constraint firstItem="vw3-if-VxI" firstAttribute="top" secondItem="cNN-0K-Jo6" secondAttribute="top" constant="8" id="tul-48-Wh5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ingredientsLabel" destination="sgX-Yh-Dg5" id="uHP-e5-nFM"/>
+                                    <outlet property="nameLabel" destination="KF0-8z-cDA" id="ndv-To-Gto"/>
+                                    <outlet property="thumbnailImageView" destination="vw3-if-VxI" id="00M-R7-57F"/>
+                                    <outlet property="timeLbael" destination="T27-vx-aTG" id="Sjs-OL-h4u"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XZH-fq-dIf" id="XVn-Lk-Axn"/>
+                            <outlet property="delegate" destination="XZH-fq-dIf" id="Sey-M4-JJs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="RECETARIO" id="ULe-Ix-4wd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qb9-Sr-b32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="114.69265367316342"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qf8-G0-NEx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vaG-Pn-Xj7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sNH-vr-2sx">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XZH-fq-dIf" kind="relationship" relationship="rootViewController" id="neT-FI-tVo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9eQ-4z-6vm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183.19999999999999" y="114.69265367316342"/>
+        </scene>
+    </scenes>
+</document>
